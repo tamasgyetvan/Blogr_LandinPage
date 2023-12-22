@@ -1,0 +1,28 @@
+@use "../base";
+@use "../utils";
+
+
+header {
+    @include utils.flexbox($alignItems: center, $justifyContent: space-between);
+    margin:  5rem 10rem 5rem 10rem;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .navContainer {
+        @include utils.flexbox($alignItems: center);
+        gap: 5rem;
+
+        nav {
+            @include utils.flexbox();
+            gap: 2rem;
+        }
+    }
+
+    .authContainer {
+        @include utils.flexbox();
+        gap: 2rem;
+    }
+}
+
