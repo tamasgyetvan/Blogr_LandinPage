@@ -1,15 +1,12 @@
 import "../../scss/components/Header.scss";
+import { NavBar } from "./NavBar";
 
-export const Header: React.FC = () => {
+export const Header = () => {
   return (
     <header>
       <div className="navContainer">
         <h1>Blogr</h1>
-        <nav>
-          <button>Product</button>
-          <button>Company</button>
-          <button>Connect</button>
-        </nav>
+        <NavBar></NavBar>
       </div>
       <div className="authContainer">
         <button>Login</button>
