@@ -1,28 +1,54 @@
 @use "../base";
 @use "../utils";
 
-
 header {
-    @include utils.flexbox($alignItems: center, $justifyContent: space-between);
-    margin:  5rem 10rem 5rem 10rem;
+  @include utils.flexbox($alignItems: center, $justifyContent: space-between);
+  padding: 5rem 10rem 5rem 10rem;
+  background-color: rgb(238, 168, 146);
 
-    h1 {
-        font-size: 4rem;
+  h1 {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    color: base.$white;
+    font-size: 4rem;
+  }
+
+  .navContainer {
+    @include utils.flexbox();
+    gap: 5rem;
+
+    nav {
+      @include utils.flexbox($alignItems: flex-end);
+      gap: 2rem;
     }
+  }
 
-    .navContainer {
-        @include utils.flexbox($alignItems: center);
-        gap: 5rem;
+  .authContainer {
+    @include utils.flexbox($alignItems: center);
+    gap: 2rem;
 
-        nav {
-            @include utils.flexbox();
-            gap: 2rem;
-        }
+    .loginButton {
+      border: none;
+      background: none;
+      font-size: 1.7rem;
+      font-family: "Ubuntu";
+      font-weight: 500;
+      color: base.$white;
     }
-
-    .authContainer {
-        @include utils.flexbox();
-        gap: 2rem;
+    .signupButton {
+      font-size: 1.7rem;
+      font-family: "Ubuntu";
+      font-weight: 500;
+      color: base.$lightRed;
+      background-color: white;
+      border: none;
+      padding: 15px 45px 15px 45px;
+      border-radius: 25px;
+      transition: 0.2s linear;
+      &:hover {
+        background-color: hsl(355, 100%, 74%);
+        color: white;
+      }
     }
+  }
 }
-

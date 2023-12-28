@@ -1,4 +1,3 @@
-import "../../scss/components/Header.scss";
 import { NavBar } from "./NavBar";
 
 export const Header = () => {
@@ -9,8 +8,8 @@ export const Header = () => {
         <NavBar></NavBar>
       </div>
       <div className="authContainer">
-        <button>Login</button>
-        <button>Sign Up</button>
+        <button className="loginButton">Login</button>
+        <button className="signupButton">Sign Up</button>
       </div>
     </header>
   );
