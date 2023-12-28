@@ -4,8 +4,9 @@
 header {
   @include utils.flexbox($alignItems: center, $justifyContent: space-between);
   padding: 5rem 10rem 5rem 10rem;
-  background-color: rgb(238, 168, 146);
-
+  background-image: url("public/images/bg-pattern-intro-desktop.svg");
+  background-position: center;
+  background-color: aqua;
   h1 {
     font-family: "Ubuntu";
     font-weight: 700;

@@ -1,0 +1,22 @@
+@use "../base";
+@use "../utils";
+
+
+.hero {
+    background-color: red;
+    font-family: "Ubuntu";
+    color: base.$white;
+    @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
+    gap: 4rem;
+    padding: 5rem 3rem 3rem 3rem;
+    .heroTitle {
+        font-size: 5.2rem;
+
+    }
+
+    p {
+        font-family: "Overpass";
+        font-size: 2rem;
+    }
+
+}
