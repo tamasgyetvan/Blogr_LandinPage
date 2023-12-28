@@ -2,54 +2,58 @@
 @use "../utils";
 
 header {
-  @include utils.flexbox($alignItems: center, $justifyContent: space-between);
-  padding: 5rem 10rem 5rem 10rem;
-  background-image: url("public/images/bg-pattern-intro-desktop.svg");
+  position: relative;
+  background-image: url("public/images/bg-pattern-intro-desktop.svg"), linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   background-position: center;
-  background-color: aqua;
-  h1 {
-    font-family: "Ubuntu";
-    font-weight: 700;
-    color: base.$white;
-    font-size: 4rem;
+  border-bottom-left-radius: 100px;
+  img {
+    position: absolute;
+    transform: scale(0.1, 0.1);
+   
   }
 
-  .navContainer {
-    @include utils.flexbox();
-    gap: 5rem;
+  .navWrapper {
+    
+    @include utils.flexbox($justifyContent: flex-start, $alignItems: flex-end);
+    padding: 5rem 10rem 5rem 10rem;
+    gap: 2rem;    
 
-    nav {
-      @include utils.flexbox($alignItems: flex-end);
-      gap: 2rem;
-    }
-  }
-
-  .authContainer {
-    @include utils.flexbox($alignItems: center);
-    gap: 2rem;
-
-    .loginButton {
-      border: none;
-      background: none;
-      font-size: 1.7rem;
+    h1 {
       font-family: "Ubuntu";
-      font-weight: 500;
+      font-weight: 700;
       color: base.$white;
+      font-size: 4rem;
     }
-    .signupButton {
-      font-size: 1.7rem;
-      font-family: "Ubuntu";
-      font-weight: 500;
-      color: base.$lightRed;
-      background-color: white;
-      border: none;
-      padding: 15px 45px 15px 45px;
-      border-radius: 25px;
-      transition: 0.2s linear;
-      &:hover {
-        background-color: hsl(355, 100%, 74%);
-        color: white;
+    
+    nav {
+      @include utils.flexbox($alignItems: center);
+
+      .navContainer {
+        @include utils.flexbox();
+        gap: 2rem;
+      }
+      .authContainer {
+        @include utils.flexbox();
+        gap: 10px;
+        position: absolute;
+        top: 4.5rem;
+        right: 5rem;
+        .loginButton {
+          border: none;
+          background: none;
+          font-size: 1.7rem;
+          font-family: "Ubuntu";
+          font-weight: 500;
+          color: base.$white;
+        }
+        .signupButton {
+          @include utils.primaryButton;          
+          padding: 15px 45px 15px 45px;          
+        }
       }
     }
   }
+
+
+  
 }

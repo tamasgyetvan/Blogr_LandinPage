@@ -20,10 +20,10 @@
     padding: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
-    button {
+    .subMenu {
       background: none;
       border: none;
-      font-family: "Ubuntu";
+      font-family: "Overpass";
       font-size: 1.6rem;
 
       &:hover {
@@ -36,8 +36,8 @@
     color: base.$white;
     background: none;
     border: none;
-    font-family: "Ubuntu";
-    font-weight: 500;
+    font-family: "Overpass";
+    font-weight: 600;
     font-size: 1.8rem;
   }
 }

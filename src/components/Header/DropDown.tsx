@@ -15,7 +15,7 @@ export const DropDown = ({ title, menuItems }: DropDownProps) => {
       {open ? (
         <div className="dropDownMenu">
           {menuItems.map((item) => {
-            return <button>{item}</button>;
+            return <button className="subMenu">{item}</button>;
           })}
         </div>
       ) : null}

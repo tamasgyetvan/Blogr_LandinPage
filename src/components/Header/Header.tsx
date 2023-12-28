@@ -1,16 +1,14 @@
+import { Hero } from "../Hero/Hero";
 import { NavBar } from "./NavBar";
 
 export const Header = () => {
   return (
     <header>
-      <div className="navContainer">
+      <div className="navWrapper">
         <h1>Blogr</h1>
         <NavBar></NavBar>
       </div>
-      <div className="authContainer">
-        <button className="loginButton">Login</button>
-        <button className="signupButton">Sign Up</button>
-      </div>
+      <Hero></Hero>
     </header>
   );
 };

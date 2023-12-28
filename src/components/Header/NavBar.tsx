@@ -22,11 +22,17 @@ export const NavBar = () => {
   ];
   return (
     <nav>
-      {DropDownItems.map((item) => {
-        return (
-          <DropDown title={item.title} menuItems={item.menuItems}></DropDown>
-        );
-      })}
+      <div className="navContainer">
+        {DropDownItems.map((item) => {
+          return (
+            <DropDown title={item.title} menuItems={item.menuItems}></DropDown>
+          );
+        })}
+      </div>
+      <div className="authContainer">
+        <button className="loginButton">Login</button>
+        <button className="signupButton">Sign Up</button>
+      </div>
     </nav>
   );
 };
