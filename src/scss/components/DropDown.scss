@@ -3,10 +3,32 @@
 
 .dropDown {
   position: relative;
-  @include utils.flexbox($direction: column);
+  @include utils.flexbox();
 
   &:hover {
     text-decoration: underline 1.8px white;
+  }
+
+  .buttonWrapper {
+
+    
+    .dropDownButton {
+      @include utils.flexbox($alignItems: center, $justifyContent: center);
+      gap: 5px;
+      color: base.$white;
+      background: none;
+      border: none;
+      font-family: "Overpass";
+      font-weight: 600;
+      font-size: 1.8rem;    
+
+      &:focus {
+        .arrow {
+          transform: rotate(180deg);
+        }
+      }
+    
+    }
   }
 
   .dropDownMenu {
@@ -32,12 +54,5 @@
     }
   }
 
-  .dropDownButton {
-    color: base.$white;
-    background: none;
-    border: none;
-    font-family: "Overpass";
-    font-weight: 600;
-    font-size: 1.8rem;
-  }
+  
 }

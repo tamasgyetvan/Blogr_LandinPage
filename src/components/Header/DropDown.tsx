@@ -9,9 +9,13 @@ export const DropDown = ({ title, menuItems }: DropDownProps) => {
 
   return (
     <div className="dropDown">
-      <button className="dropDownButton" onClick={() => setOpen(!open)}>
-        {title}
-      </button>
+      <div className="buttonWrapper">
+        <button className="dropDownButton" onClick={() => setOpen(!open)}>
+          {title}
+
+          <img src="public/images/icon-arrow-light.svg" className="arrow" />
+        </button>
+      </div>
       {open ? (
         <div className="dropDownMenu">
           {menuItems.map((item) => {
