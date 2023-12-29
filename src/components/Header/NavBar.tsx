@@ -1,5 +1,5 @@
 import { DropDown } from "./DropDown";
-
+import { useState } from "react";
 type DropDownItem = {
   title: string;
   menuItems: Array<string>;
@@ -20,12 +20,25 @@ export const NavBar = () => {
       menuItems: ["Contact", "Newsletter", "Linkedin"],
     },
   ];
+
+  const [active, isActive] = useState<string | null>();
   return (
     <nav>
       <div className="navContainer">
         {DropDownItems.map((item) => {
           return (
-            <DropDown title={item.title} menuItems={item.menuItems}></DropDown>
+            <DropDown
+              title={item.title}
+              menuItems={item.menuItems}
+              handleClick={() => {
+                if (active === item.title) {
+                  isActive(null);
+                } else {
+                  isActive(item.title);
+                }
+              }}
+              currentActive={active}
+            ></DropDown>
           );
         })}
       </div>

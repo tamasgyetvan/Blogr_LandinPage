@@ -20,13 +20,7 @@
       border: none;
       font-family: "Overpass";
       font-weight: 600;
-      font-size: 1.8rem;    
-
-      &:focus {
-        .arrow {
-          transform: rotate(180deg);
-        }
-      }
+      font-size: 1.8rem;     
     
     }
   }

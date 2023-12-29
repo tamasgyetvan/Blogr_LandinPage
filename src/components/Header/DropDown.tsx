@@ -1,22 +1,25 @@
-import { useState } from "react";
 export type DropDownProps = {
   title: string;
   menuItems: Array<string>;
+  handleClick: () => void;
+  currentActive: any;
 };
 
-export const DropDown = ({ title, menuItems }: DropDownProps) => {
-  const [open, setOpen] = useState(false);
-
+export const DropDown = ({
+  title,
+  menuItems,
+  handleClick,
+  currentActive,
+}: DropDownProps) => {
   return (
     <div className="dropDown">
       <div className="buttonWrapper">
-        <button className="dropDownButton" onClick={() => setOpen(!open)}>
+        <button className="dropDownButton" onClick={handleClick}>
           {title}
-
           <img src="public/images/icon-arrow-light.svg" className="arrow" />
         </button>
       </div>
-      {open ? (
+      {title === currentActive ? (
         <div className="dropDownMenu">
           {menuItems.map((item) => {
             return <button className="subMenu">{item}</button>;
