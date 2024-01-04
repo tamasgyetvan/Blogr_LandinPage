@@ -19,5 +19,24 @@ header {
       color: base.$white;
       font-size: 4rem;
     }
+
+    .menuButton {
+      background: none;
+      border: none;
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    .navWrapper {
+      @include utils.flexbox($justifyContent: space-between);
+      padding: 5rem 2.5em 5rem 2.5rem;
+
+      .menuButton {
+        display: block;
+      }
+    }
   }
 }

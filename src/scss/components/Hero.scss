@@ -12,12 +12,14 @@
   gap: 4rem;
   padding: 5rem 3rem 3rem 3rem;
   .heroTitle {
+    text-align: center;
     font-size: 5.2rem;
   }
 
   p {
+    text-align: center;
     font-family: "Overpass";
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .buttonContainer {
@@ -43,6 +45,14 @@
         background-color: white;
         color: base.$lightRed;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .heroWrapper {
+    .heroTitle {
+      font-size: 4.8rem;
     }
   }
 }

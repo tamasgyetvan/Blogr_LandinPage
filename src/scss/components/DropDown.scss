@@ -5,41 +5,38 @@
   position: relative;
   @include utils.flexbox();
 
-  &:hover {
-    text-decoration: underline 1.8px white;
-  }
-
   .buttonWrapper {
-
-    
     .dropDownButton {
       @include utils.flexbox($alignItems: center, $justifyContent: center);
       gap: 5px;
-      color: base.$white;
       background: none;
       border: none;
       font-family: "Overpass";
       font-weight: 600;
-      font-size: 1.8rem;     
-    
+      font-size: 1.8rem;
+      color: base.$white;
+
+      &:hover {
+        text-decoration: underline 1.8px white;
+      }
     }
   }
 
   .dropDownMenu {
-    background-color: white;
+    width: 100px;
+    @include utils.flexbox($direction: column, $alignItems: flex-start);
+    gap: 10px;
     position: absolute;
     top: 25px;
     border-radius: 5px;
-    @include utils.flexbox($direction: column);
-    gap: 10px;
-    width: 90px;
     padding: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
 
     .subMenu {
       background: none;
       border: none;
-      font-family: "Overpass";
+      font-family: "Ubuntu";
       font-size: 1.6rem;
 
       &:hover {
@@ -47,6 +44,41 @@
       }
     }
   }
+}
 
-  
+@media only screen and (max-width: 900px) {
+  .dropDown {
+    @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
+    width: 100%;
+    .buttonWrapper {
+      .dropDownButton {
+        @include utils.flexbox($justifyContent: space-between, $alignItems: center);
+        color: base.$darkBlue;
+
+        svg {
+          color: base.$lightRed;
+        }
+      }
+    }
+
+    .dropDownMenu {
+      @include utils.flexbox($direction: column, $alignItems: center);
+      position: static;
+      box-sizing: border-box;
+      padding: 2rem;
+      width: 100%;
+      box-shadow: none;
+      background-color: hsl(0, 10%, 92%);
+      gap: 2rem;
+
+      .subMenu {
+        background: none;
+        border: none;
+        font-family: "Overpass";
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: base.$darkBlue;
+      }
+    }
+  }
 }

@@ -1,13 +1,14 @@
 export type DropDownProps = {
-  title: string;
-  menuItems: Array<string>;
+  content: {
+    title: string;
+    menuItems: Array<string>;
+  };
   handleClick: () => void;
   currentActive: any;
 };
 
 export const DropDown = ({
-  title,
-  menuItems,
+  content,
   handleClick,
   currentActive,
 }: DropDownProps) => {
@@ -15,13 +16,21 @@ export const DropDown = ({
     <div className="dropDown">
       <div className="buttonWrapper">
         <button className="dropDownButton" onClick={handleClick}>
-          {title}
-          <img src="public/images/icon-arrow-light.svg" className="arrow" />
+          {content.title}
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              opacity=".75"
+              d="M1 1l4 4 4-4"
+            />
+          </svg>
         </button>
       </div>
-      {title === currentActive ? (
+      {content.title === currentActive ? (
         <div className="dropDownMenu">
-          {menuItems.map((item) => {
+          {content.menuItems.map((item) => {
             return <button className="subMenu">{item}</button>;
           })}
         </div>

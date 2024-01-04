@@ -1,43 +1,51 @@
 import { DropDown } from "./DropDown";
 import { useState } from "react";
 type DropDownItem = {
+  id: number;
   title: string;
   menuItems: Array<string>;
 };
 
-export const NavBar = () => {
+type NavBarProps = {
+  toggleMobileMenu: boolean;
+};
+
+export const NavBar = ({ toggleMobileMenu }: NavBarProps) => {
   const DropDownItems: Array<DropDownItem> = [
     {
+      id: 1,
       title: "Overview",
       menuItems: ["Pricing", "Marketplace", "Features", "Integrations"],
     },
     {
+      id: 2,
       title: "Company",
       menuItems: ["About", "Team", "Blog", "Careers"],
     },
     {
+      id: 3,
       title: "Connect",
       menuItems: ["Contact", "Newsletter", "Linkedin"],
     },
   ];
 
-  const [active, isActive] = useState<string | null>();
+  const [activeDropDown, setActiveDropDown] = useState<string | null>();
   return (
-    <nav>
+    <nav className={toggleMobileMenu ? "mobile-active" : undefined}>
       <div className="navContainer">
         {DropDownItems.map((item) => {
           return (
             <DropDown
-              title={item.title}
-              menuItems={item.menuItems}
+              key={item.id}
+              content={item}
               handleClick={() => {
-                if (active === item.title) {
-                  isActive(null);
+                if (activeDropDown === item.title) {
+                  setActiveDropDown(null);
                 } else {
-                  isActive(item.title);
+                  setActiveDropDown(item.title);
                 }
               }}
-              currentActive={active}
+              currentActive={activeDropDown}
             ></DropDown>
           );
         })}

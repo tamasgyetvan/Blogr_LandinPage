@@ -1,7 +1,6 @@
 @use "../base";
 @use "../utils";
 
-
 nav {
   @include utils.flexbox($alignItems: center);
 
@@ -13,8 +12,8 @@ nav {
     @include utils.flexbox();
     gap: 10px;
     position: absolute;
-    top: 4.5rem;
-    right: 5rem;
+    top: 5rem;
+    right: 10rem;
     .loginButton {
       border: none;
       background: none;
@@ -26,6 +25,60 @@ nav {
     .signupButton {
       @include utils.primaryButton;
       padding: 15px 45px 15px 45px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .mobile-active {
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+    width: 75%;
+    box-sizing: border-box;
+    padding: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    background-color: white;
+    @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
+    gap: 2rem;
+
+    .navContainer {
+      @include utils.flexbox($direction: column, $alignItems: center);
+      gap: 2rem;
+      width: 100%;
+    }
+
+    .authContainer {
+      width: 100%;
+      @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
+      gap: 2rem;
+      position: static;
+      box-sizing: border-box;
+      padding: 2rem;
+      
+      border-top: 2px solid hsl(0, 10%, 92%);
+      .loginButton {
+        color: base.$darkBlue;
+      }
+
+      .signupButton {
+        font-size: 1.8rem;
+        font-family: "Ubuntu";
+        font-weight: 500;
+        color: white;
+        background-image: linear-gradient(
+          hsl(13, 100%, 72%),
+          hsl(353, 100%, 62%)
+        );
+        border: none;
+        border-radius: 25px;
+        transition: 0.2s linear;
+      }
     }
   }
 }
