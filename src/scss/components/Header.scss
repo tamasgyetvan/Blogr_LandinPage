@@ -3,15 +3,15 @@
 
 header {
   position: relative;
-  background-image: url("public/images/bg-pattern-intro-desktop.svg"), linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-image: url("public/images/bg-pattern-intro-desktop.svg"),
+    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   background-position: center;
   border-bottom-left-radius: 100px;
 
   .navWrapper {
-    
     @include utils.flexbox($justifyContent: flex-start, $alignItems: flex-end);
     padding: 5rem 10rem 5rem 10rem;
-    gap: 2rem;    
+    gap: 2rem;
 
     h1 {
       font-family: "Ubuntu";
@@ -19,36 +19,5 @@ header {
       color: base.$white;
       font-size: 4rem;
     }
-    
-    nav {
-      @include utils.flexbox($alignItems: center);
-
-      .navContainer {
-        @include utils.flexbox();
-        gap: 2rem;
-      }
-      .authContainer {
-        @include utils.flexbox();
-        gap: 10px;
-        position: absolute;
-        top: 4.5rem;
-        right: 5rem;
-        .loginButton {
-          border: none;
-          background: none;
-          font-size: 1.8rem;
-          font-family: "Ubuntu";
-          font-weight: 500;
-          color: base.$white;
-        }
-        .signupButton {
-          @include utils.primaryButton;          
-          padding: 15px 45px 15px 45px;          
-        }
-      }
-    }
   }
-
-
-  
 }

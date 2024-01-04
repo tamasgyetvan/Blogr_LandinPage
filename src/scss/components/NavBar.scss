@@ -1,0 +1,31 @@
+@use "../base";
+@use "../utils";
+
+
+nav {
+  @include utils.flexbox($alignItems: center);
+
+  .navContainer {
+    @include utils.flexbox();
+    gap: 2rem;
+  }
+  .authContainer {
+    @include utils.flexbox();
+    gap: 10px;
+    position: absolute;
+    top: 4.5rem;
+    right: 5rem;
+    .loginButton {
+      border: none;
+      background: none;
+      font-size: 1.8rem;
+      font-family: "Ubuntu";
+      font-weight: 500;
+      color: base.$white;
+    }
+    .signupButton {
+      @include utils.primaryButton;
+      padding: 15px 45px 15px 45px;
+    }
+  }
+}
