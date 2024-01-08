@@ -5,7 +5,6 @@
   position: relative;
   @include utils.flexbox();
 
-  .buttonWrapper {
     .dropDownButton {
       @include utils.flexbox($alignItems: center, $justifyContent: center);
       gap: 5px;
@@ -20,7 +19,7 @@
         text-decoration: underline 1.8px white;
       }
     }
-  }
+  
 
   .dropDownMenu {
     width: 100px;
@@ -50,7 +49,6 @@
   .dropDown {
     @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
     width: 100%;
-    .buttonWrapper {
       .dropDownButton {
         @include utils.flexbox($justifyContent: space-between, $alignItems: center);
         color: base.$darkBlue;
@@ -59,7 +57,7 @@
           color: base.$lightRed;
         }
       }
-    }
+    
 
     .dropDownMenu {
       @include utils.flexbox($direction: column, $alignItems: center);
