@@ -24,22 +24,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-
-    .textBox {
-      max-width: 500px;
-      h3 {
-        font-size: 3rem;
-        font-family: "Ubuntu";
-        color: base.$darkBlue;
-        margin-bottom: 15px;
-      }
-
-      p {
-        font-family: "Overpass";
-        font-size: 1.8rem;
-        line-height: 1.6;
-      }
-    }
   }
 }
 
@@ -72,10 +56,6 @@ section {
     .textContainer {
       top: 0;
       left: 0;
-
-      .textBox > * {
-        text-align: center;
-      }
     }
   }
 }

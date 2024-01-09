@@ -1,0 +1,26 @@
+@use "../base";
+@use "../utils";
+
+section {
+  .textBox {
+    max-width: 500px;
+    h3 {
+      font-size: 3rem;
+      font-family: "Ubuntu";
+      color: base.$darkBlue;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-family: "Overpass";
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .textBox > * {
+    text-align: center;
+  }
+}
