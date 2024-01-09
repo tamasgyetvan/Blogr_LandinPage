@@ -1,6 +1,7 @@
 /* bring component styles here with @use */
-@use "../scss/components/Header.scss";
+@use "../scss/layout/Header.scss";
 @use "../scss/components/NavBar.scss";
 @use "../scss/components/DropDown.scss";
 @use "../scss/components/Hero.scss";
 @use "../scss/layout/Main.scss";
+@use "../scss/components/SectionOne.scss"
