@@ -6,7 +6,6 @@
   z-index: 5;
   background-color: white;
   width: 100vw;
-  padding-bottom: 10rem;
   .svgMobile {
     display: none;
   }
@@ -34,7 +33,6 @@
   .sectionOne {
     @include utils.flexbox($justifyContent: space-between);
     gap: 5rem;
-    padding-bottom: 5rem;
     .svgMobile {
 
       display: block;
@@ -53,7 +51,7 @@
 @media only screen and (max-width: 950px) {
   .sectionOne {
     @include utils.flexbox($direction: column-reverse, $alignItems: center);
-    padding-bottom: 30rem;
+
     .svgMobile {
       width: 100%;
     }
