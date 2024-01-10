@@ -1,0 +1,60 @@
+.sectionTwo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 10rem;
+    background-image:  linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    border-radius: 0 100px 0px 100px;
+    
+    .circle {
+        position: absolute;
+        top: -550px;
+        left: 18%;
+            transform: translateX(-35%);
+        z-index: 2;
+    }
+
+
+    .phone {
+        z-index: 5;
+        
+    }
+    
+}
+
+@media only screen and (max-width: 950px) {
+    .sectionTwo {
+        position: relative;
+        padding-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 40vh;
+        
+        
+        .circle {
+            width: 800px;
+            position: absolute;
+            top: -65%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+    
+        #root {
+
+        }
+        .phone {
+            position: absolute;
+            top: -280px;
+            
+        }
+        
+    }
+  }
+  

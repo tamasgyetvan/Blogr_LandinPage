@@ -2,7 +2,7 @@ import { TextBox } from "./TextBox";
 
 export const SectionOne = () => {
   return (
-    <section>
+    <section className="sectionOne">
       <div className="textContainer">
         <TextBox
           title="Introducing an extensible editor"
