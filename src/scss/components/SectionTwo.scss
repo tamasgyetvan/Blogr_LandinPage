@@ -6,10 +6,8 @@
     gap: 5rem;
     width: 100vw;
     height: 40vh;
-    margin-bottom: 10rem;
     background-image:  linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     border-radius: 0 100px 0px 100px;
-    
     .circle {
         position: absolute;
         top: -550px;
@@ -46,9 +44,7 @@
             
         }
     
-        #root {
 
-        }
         .phone {
             position: absolute;
             top: -280px;
