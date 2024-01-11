@@ -5,13 +5,13 @@ main {
   @include utils.flexbox($direction: column, $alignItems: center);
   position: relative;
   overflow: hidden;
-
+  gap: 10rem;
   h2 {
     position: absolute;
     font-size: 3.6rem;
     font-family: "Overpass";
     color: base.$darkBlue;
-    padding: 10rem;
+    padding: 10rem 10rem 0 10rem;
     z-index: 10;
   }
 }
@@ -20,7 +20,6 @@ main {
   main {
     h2 {
       position: static;
-      padding-bottom: 0;
     }
   }
 }
@@ -29,7 +28,6 @@ main {
     h2 {
       white-space: nowrap;
       font-size: 3.5rem;
-      padding-bottom: 6rem;
     }
   }
 }
