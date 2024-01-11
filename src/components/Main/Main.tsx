@@ -1,4 +1,5 @@
 import { SectionOne } from "./SectionOne";
+import { SectionThree } from "./SectionThree";
 import { SectionTwo } from "./SectionTwo";
 
 export const Main = () => {
@@ -7,6 +8,7 @@ export const Main = () => {
       <h2>Designed for the future</h2>
       <SectionOne />
       <SectionTwo />
+      <SectionThree />
     </main>
   );
 };

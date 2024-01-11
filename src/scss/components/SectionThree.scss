@@ -1,0 +1,57 @@
+.sectionThree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 5rem;
+
+  .laptopMobile {
+    display: none;
+  }
+
+  .textContainer {
+    position: relative;
+    right: -280px;
+    box-sizing: border-box;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .laptopDesktop {
+    position: absolute;
+    right: 330px;
+
+  }
+}
+
+@media only screen and (max-width: 950px) {
+    .sectionThree {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem;
+      
+        .laptopMobile {
+            width: 500px;
+            display: block;
+        }
+      
+        .textContainer {
+        position: static;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          gap: 4rem;
+          padding: 5rem;
+
+        }
+      
+        .laptopDesktop {
+          display: none;
+      
+        }
+      }
+}
