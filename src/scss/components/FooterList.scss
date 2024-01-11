@@ -1,0 +1,24 @@
+.footerList {
+    font-family: "Ubuntu";
+    color: white;
+
+    .title {
+        font-family: "Overpass";
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    ul {
+
+        
+        li {
+            font-size: 1.6rem;
+            margin-top: 20px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}

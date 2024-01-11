@@ -1,0 +1,29 @@
+@use "../base";
+@use "../utils";
+
+
+footer {
+    @include utils.flexbox($justifyContent: space-around);
+    padding: 5rem;
+    background-color: hsl(240, 10%, 16%);
+    border-radius: 0 100px 0 0;
+
+    h1 {
+        font-family: "Overpass";
+        font-weight: 600;
+        color: base.$white;
+        font-size: 4rem;
+        
+      }
+}
+
+
+@media only screen and (max-width: 950px) {
+    footer {
+        @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
+        gap: 4rem;
+    }
+    h1 {
+        margin-bottom: 5rem;
+    }
+}
