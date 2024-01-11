@@ -5,12 +5,12 @@ export const SectionThree = () => {
     <section className="sectionThree">
       <img
         className="laptopDesktop"
-        src="public/images/illustration-laptop-desktop.svg"
+        src="images/illustration-laptop-desktop.svg"
         alt=""
       />
       <img
         className="laptopMobile"
-        src="public/images/illustration-laptop-mobile.svg"
+        src="images/illustration-laptop-mobile.svg"
         alt=""
       />
       <div className="textContainer">
