@@ -3,8 +3,23 @@
 
 header {
   position: relative;
-  background-image: url("images/bg-pattern-intro-desktop.svg"),
-    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-image: url("../../../public/images/bg-pattern-intro-desktop.svg"),
+  linear-gradient(
+    90deg,
+    hsl(13deg 100% 72%) 0%,
+    hsl(11deg 100% 71%) 8%,
+    hsl(10deg 100% 70%) 17%,
+    hsl(8deg 100% 69%) 25%,
+    hsl(6deg 100% 69%) 33%,
+    hsl(4deg 100% 68%) 42%,
+    hsl(3deg 100% 67%) 50%,
+    hsl(1deg 100% 66%) 59%,
+    hsl(360deg 100% 65%) 67%,
+    hsl(358deg 100% 65%) 75%,
+    hsl(356deg 100% 64%) 83%,
+    hsl(355deg 100% 63%) 92%,
+    hsl(353deg 100% 62%) 100%
+  );;
   background-position: center;
   border-bottom-left-radius: 100px;
 

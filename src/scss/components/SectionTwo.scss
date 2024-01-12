@@ -21,7 +21,7 @@
   .sectionTwo {
     @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
     height: auto;
-    background: url("images/bg-pattern-circles.svg") top -550px left 50% no-repeat,
+    background: url("../../../public/images/bg-pattern-circles.svg") top -550px left 50% no-repeat,
       linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     margin-top: 15rem;
     .phone {
