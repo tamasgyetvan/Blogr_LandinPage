@@ -44,16 +44,17 @@
 
     .textContainer {
       top: 0;
+      left: 150px;
     }
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1000px) {
   .sectionOne {
     @include utils.flexbox($direction: column-reverse, $alignItems: center);
 
     .svgMobile {
-      width: 100%;
+      width: 500px;
     }
     .textContainer {
       top: 0;

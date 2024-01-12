@@ -22,8 +22,10 @@ footer {
     footer {
         @include utils.flexbox($direction: column, $justifyContent: center, $alignItems: center);
         gap: 4rem;
+
+        h1 {
+            margin-bottom: 5rem;
+        }
     }
-    h1 {
-        margin-bottom: 5rem;
-    }
+    
 }

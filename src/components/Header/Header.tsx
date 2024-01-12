@@ -15,7 +15,14 @@ export const Header = () => {
           }}
           className="menuButton"
         >
-          <img src="images/icon-hamburger.svg" alt="" />
+          <img
+            src={
+              toggle == true
+                ? "images/icon-close.svg"
+                : "images/icon-hamburger.svg"
+            }
+            alt=""
+          />
         </button>
       </div>
       <Hero></Hero>
