@@ -3,7 +3,7 @@
 
 header {
   position: relative;
-  background-image: url("../../../public/images/bg-pattern-intro-desktop.svg"),
+  background-image: url("../../public/images/bg-pattern-intro-desktop.svg"),
   linear-gradient(
     90deg,
     hsl(13deg 100% 72%) 0%,
@@ -19,7 +19,7 @@ header {
     hsl(356deg 100% 64%) 83%,
     hsl(355deg 100% 63%) 92%,
     hsl(353deg 100% 62%) 100%
-  );;
+  );
   background-position: center;
   border-bottom-left-radius: 100px;
 
